@@ -30,13 +30,8 @@
 
 <body>
     <div>
-        <!-- Sidebar -->
-        <?php //include '../models/templates/sidebar.php' ?>
-        <!-- End of Sidebar -->
-    </div>
-    <div>
         <!-- Main Header -->
-        <?php //include '../models/templates/main-header.php' ?>
+        <?php include '../models/templates/main-header.php' ?>
         <!-- End of Main Header -->
         <!-- Main Content -->
         <div class="form-container">
@@ -44,7 +39,7 @@
                 <div class="logo">
                     <img src="../assets/images/Diamante.png" alt="logo">
                 </div>
-                <h3>login now</h3>
+                <h3>login</h3>
                 <input type="text" name="username" placeholder="Enter your username" autocomplete="off" required>
                 <input type="password" name="password" placeholder="Enter your password" autocomplete="off" required>
                 <input type="submit" name="submit" value="login now" class="form-btn">
@@ -54,11 +49,11 @@
         </div>
         <!-- End of Main Content -->
         <!-- Main Footer -->
-        <?php //include '../models/templates/main-footer.php' ?>
+        <?php include '../models/templates/main-footer.php' ?> <!-- file code is empty, needs to be filled -->
         <!-- End of Main Footer -->
     </div>
     <!-- Footer -->
-    <?php //include '../models/templates/footer.php' ?>
+    <?php include '../models/templates/footer.php' ?> <!-- file code is empty, needs to be filled -->
     <!-- End of Footer -->
 </body>
 
