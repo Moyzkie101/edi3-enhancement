@@ -1,6 +1,6 @@
 <?php
 	include '../../config/connection.php';
-    
+    session_start();
     unset($_SESSION['email']);
     unset($_SESSION['user_type']);	
     

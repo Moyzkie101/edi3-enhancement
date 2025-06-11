@@ -1,16 +1,12 @@
 <?php
-    // Start the session
     include '../config/connection.php';
     session_start();
 
-    // $allowed_types = ['admin', 'user'];
-
-    // // Check if user_type is set and allowed
-    // if (!isset($_SESSION['user_type']) || !in_array($_SESSION['user_type'], $allowed_types)) {
-    //     // Redirect guests or unauthorized users to login page
-    //     header('Location: ../Auth/login.php');
-    //     exit();
-    // }
+    if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] === 'user') {
+        header("Location: ../../../../../Auth/login.php");
+        session_destroy();
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,12 +28,6 @@
         <!-- End of Header -->
     </head>
     <body>
-        <p>Hello, <?php echo $_SESSION['user_type']; ?></p>
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <!-- Sidebar -->
-            <?php include '../models/templates/sidebar.php' ?>
-            <!-- End of Sidebar -->
-        </div>
+        
     </body>
 </html>

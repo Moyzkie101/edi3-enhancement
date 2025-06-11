@@ -1,17 +1,3 @@
-<?php
-    // Start the session
-    include '../config/connection.php';
-    session_start();
-
-    // $allowed_types = ['admin', 'user'];
-
-    // // Check if user_type is set and allowed
-    // if (!isset($_SESSION['user_type']) || !in_array($_SESSION['user_type'], $allowed_types)) {
-    //     // Redirect guests or unauthorized users to login page
-    //     header('Location: ../Auth/login.php');
-    //     exit();
-    // }
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,16 +14,11 @@
         <meta name="twitter:description" content="A short and engaging description of your page content." />
         <meta name="twitter:image" content="https://yourwebsite.com/image.jpg" />
         <!-- Header -->
-        <?php include '../models/templates/header.php' ?>
+        <?php include '../../models/templates/header.php' ?>
         <!-- End of Header -->
     </head>
     <body>
-        <p>Hello, <?php echo $_SESSION['user_type']; ?></p>
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <!-- Sidebar -->
-            <?php include '../models/templates/sidebar.php' ?>
-            <!-- End of Sidebar -->
-        </div>
+        <center><h2>Account User <span style="font-size: 22px; color: red;">[MAINTENANCE]</span></h2></center>
+        
     </body>
 </html>
