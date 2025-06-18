@@ -1,4 +1,5 @@
 <?php
+    session_start(); // <-- Add this line at the very top
     include '../../config/connection.php';
 
     if(isset($_POST["submit"])){

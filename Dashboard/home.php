@@ -1,16 +1,16 @@
 <?php
     // Start the session
-    include '../config/connection.php';
     session_start();
+    include '../config/connection.php';
 
-    // $allowed_types = ['admin', 'user'];
+    $allowed_types = ['admin', 'user', 'system'];
 
-    // // Check if user_type is set and allowed
-    // if (!isset($_SESSION['user_type']) || !in_array($_SESSION['user_type'], $allowed_types)) {
-    //     // Redirect guests or unauthorized users to login page
-    //     header('Location: ../Auth/login.php');
-    //     exit();
-    // }
+    // Check if user_type is set and allowed
+    if (!isset($_SESSION['user_type']) || !in_array($_SESSION['user_type'], $allowed_types)) {
+        // Redirect guests or unauthorized users to login page
+        header('Location: ../Auth/login.php');
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
